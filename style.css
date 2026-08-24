@@ -172,3 +172,50 @@ aside{
         opacity: 1;
     }
 }
+
+/* Responsividade para Celulares e Tablets pequenos */
+@media (max-width: 768px) {
+    
+    .container-principal {
+        padding: 25px 20px; /* Diminui o espaçamento interno */
+        width: 90%;         /* Usa porcentagem em vez de travar o tamanho */
+        box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    }
+
+    h1 {
+        font-size: 24px;    /* Reduz o título para não quebrar em três linhas */
+    }
+
+    form div {
+        flex-direction: column; /* Empilha a label e o input na vertical */
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    label {
+        width: auto;        /* Libera a largura fixa da label */
+    }
+
+    form input {
+        width: 100%;        /* O input agora usa todo o espaço do container */
+        box-sizing: border-box;
+    }
+
+    /* Aquele gato no canto inferior vai engolir seu layout no mobile. 
+       A atitude mais sensata aqui é escondê-lo para não atrapalhar o clique do usuário. */
+    aside {
+        display: none; 
+    }
+
+    /* Ajustes do Modal para não vazar da tela */
+    #card-modal {
+        padding: 20px;
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    #gato-escolhido {
+        min-width: 180px;   /* Reduz o tamanho mínimo da imagem no modal */
+        width: 60vw;
+    }
+}
