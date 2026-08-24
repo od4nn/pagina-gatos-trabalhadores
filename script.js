@@ -3,6 +3,7 @@
 let botao = document.getElementById('criar');
 
 function calcularPontoIdade(idade){
+    if (idade < 10) return 1; //criança
     if (idade  < 18) return 5; //iniciante
     if (idade < 26) return 7; //junior/pleno
     if (idade < 32) return 9; //experiente
@@ -18,6 +19,7 @@ function calcularPontoExperiencia(experiencia){
 }
 
 function calcularPontoEnergia(energia){
+    if (energia <= 2) return 1;
     if (energia <= 3) return 3;
     if (energia <= 5) return 5;
     if (energia <= 8) return 8;
