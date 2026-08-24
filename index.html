@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criador de Personagem</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+
+    <main class="container-principal">
+
+        <h1>Digite suas informações </h1> 
+
+        <form>
+             <div>
+                <label>Nome:</label>
+                <input id="nome" type="text">
+             </div>
+            
+             <div>
+                <label>Idade:</label>
+                <input id="idade" type="number" min="1" max="99">   
+             </div>
+            
+            <div>
+                <label>Experiência:</label>
+                <input id="experiencia" type="number" min="1" max="10">    
+            </div>
+
+            <div>
+                <label>Disposição:</label>
+                <input id="energia" type="number" min="1" max="10">
+            </div>
+            
+            <div class="botao-criar">
+                <button id="criar">Gerar personagem</button>
+            </div>
+            
+        </form>
+
+        
+    </main>
+
+    <div id="overlay">
+        <div id="card-modal">
+            <h2 id="nome-personagem"> </h2>
+            <img id="gato-escolhido" src="" alt="Gato do Personagem">
+            <h2 id="nivel-personagem"> </h2>
+            <h3 id="descricao-gato"> </h3>
+            <button id="fechar-modal">Voltar</button>
+        </div>
+    </div>
+
+    <aside> 
+        <img class="gato-olhando" src="./gatos/gato_olhando.png" alt="Gato olhando para a direita">     
+    </aside>
+
+    <script src="./script.js"></script>
+</body>
+</html>
